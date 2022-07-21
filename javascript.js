@@ -274,39 +274,17 @@ function makeLowercase(parameter) {
 
 makeLowercase("No");
 
-function checkForm(parameter) {
+function checkForm(parameter){
   if(parameter != "No") {
-    // let radioButtons = document.querySelectorAll('input[type="email"]');
-    // let getEmailText = radioButtons.innerText;
-    // console.log("replaceAt", replaceAt);
-
+  const email = document.querySelector('#email_address').value;
+  const lowEmail= email.toLowerCase();
+    if(email === lowEmail) {
+      return true;
+    } else {
+      alert("Email has incorrect pattern");
+      return false;
+    }
   }
 }
 
 checkForm("No");
-
-let btnSubmitForm = document.querySelector('#btn_submit');
-if(btnSubmitForm != null) {
-
-  btnSubmitForm.addEventListener('submit', function (email) {
-    // prevent the form from submitting
-    email.preventDefault();
-    isEmailValid(email);
-
-  });
-}
-
-function checkForm(){
-const email = document.querySelector('#email_address').value;
-const lowEmail= email.toLowerCase();
-if(email === lowEmail) {
-return true;
-}
-else return false;
-}
-
-const isEmailValid = (email) => {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  console.log(re);
-  return re.test(email);
-};
