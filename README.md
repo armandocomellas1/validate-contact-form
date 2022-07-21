@@ -2,7 +2,7 @@
 
 # Project Name
 
-- Portfolio: details popup window
+- Portfolio: validate contact form
 
 ## Built With
 
@@ -19,7 +19,7 @@
 
 **This is an example of how you may give instructions on setting up your project locally.**
 
-This is about how to maniplate DOM using js and fill automatically the container of the projects in my work section and also pop up window filled automatically with js.
+This is about how to validate a form with specific inputs before the form is sent to data base.
 
 # Project link live version
 https://armandocomellas1.github.io/Desktop-version/
