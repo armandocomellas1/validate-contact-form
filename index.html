@@ -91,10 +91,10 @@
           <label for="full_name">Full Name</label>
           <input id="full_name" type="text" placeholder="Text input" maxlength="30" required>
           <label for="email_address">Email Address</label>
-          <input id="email_address" type="email" placeholder="Email Address" required>
+          <input id="email_address" type="email" placeholder="Email Address" required oninput="makeLowercase();">
           <label for="text_area">Message to Send</label>
           <textarea id="text_area" name="text" cols="30" rows="10" placeholder="Write your message here" maxlength="500" required></textarea>
-          <button type="submit" class="button_submit"><span>Send</span></button>
+          <button id="btn_submit" type="submit" class="button_submit" onClick="checkForm()"><span>Send</span></button>
         </form>
       </div>
     </section>
